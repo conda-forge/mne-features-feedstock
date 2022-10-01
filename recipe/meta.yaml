@@ -1,5 +1,5 @@
 {% set name = "mne-features" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ebb8ca5cb71f46794ecbcdc195e01bfcae199c9044b8029b173ef0356816db0c
+  sha256: 5e474e42d1b4084b5eefd77b6f3e4a916c5c3049980a4a4932e5332d779c3a2d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://mne.tools/mne-features
-  license: BSD-3-Clause 
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Software for extracting features from multivariate time series data
