@@ -1,11 +1,11 @@
-About mne-features
-==================
+About mne-features-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mne-features-feedstock/blob/main/LICENSE.txt)
 
 Home: https://mne.tools/mne-features
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mne-features-feedstock/blob/main/LICENSE.txt)
 
 Summary: Software for extracting features from multivariate time series data
 
