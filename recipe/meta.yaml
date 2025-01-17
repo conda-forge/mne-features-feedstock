@@ -6,21 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cae131cf167d092ce37fabda2ed0d7c0d083f02f58fffc15ba1526aca1e393aa
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
     - numpy >=1.17
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.17
     - matplotlib-base >=1.5
     - scipy >=1.0
@@ -39,6 +40,7 @@ test:
     - mne_features.utils
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
