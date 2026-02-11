@@ -1,5 +1,5 @@
 {% set name = "mne-features" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0c9a04be1ca7973ebc5d44367f85737bcc8d9a3360fc79d28de57f04d9d6ff03
+  sha256: 2518bfaccd601ae2892ea2cd3e0f1449afb3ba82cd57914f390d6136e22ea88a
 
 build:
   noarch: python
